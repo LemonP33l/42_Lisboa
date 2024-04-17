@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:28:41 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 11:13:08 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:47:32 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 Check for a char in a string;
-Return a pointer to the first occurance of said char in string;
+Return a pointer to the first occurrence of said char in string;
 Return NULL if char's not found.
 */
 

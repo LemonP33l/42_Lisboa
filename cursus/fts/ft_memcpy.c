@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:22:13 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 17:07:02 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:57:01 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /*
 Copies n bytes from memory area src to dest;
+Memory areas must not overlap;
 Return pointer to dest;
 */
 
