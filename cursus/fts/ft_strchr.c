@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 10:32:47 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:30 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/17 09:28:41 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/17 11:13:08 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Check if c is a digit (0 through 9)
+Check for a char in a string;
+Return a pointer to the first occurance of said char in string;
+Return NULL if char's not found.
 */
 
-int	ft_isdigit(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= '0' && c <= '9')
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (1);
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

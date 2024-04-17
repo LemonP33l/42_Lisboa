@@ -6,9 +6,11 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:41:59 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 09:37:47 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:19:12 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Check if c is a printable char (including SPACE);

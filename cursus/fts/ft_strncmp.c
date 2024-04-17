@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 10:32:47 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:30 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/17 11:06:41 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/17 13:02:57 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Check if c is a digit (0 through 9)
+Compare 2 strings (s1 and s2), up to n bytes;
+Returns an int less than, equal to, or greater than 0
+(respectively: s1 <, >, = s2);
+Using unsigned chars to avoid chars having negative values;
 */
 
-int	ft_isdigit(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= '0' && c <= '9')
+	size_t	i;
+
+	i = 0;
+	while (i < n && s1[i] != '\0' && (s1[i] == s2[i]))
 	{
-		return (1);
+		i++;
 	}
-	return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

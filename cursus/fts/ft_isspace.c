@@ -6,9 +6,11 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:20:06 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 10:35:36 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:18:25 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Check white space chars: SPACE (' '), hor tab ('\t'), new line ('\n'),

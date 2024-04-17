@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 10:32:47 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:30 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/17 15:22:13 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/17 17:07:02 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Check if c is a digit (0 through 9)
+Copies n bytes from memory area src to dest;
+Return pointer to dest;
 */
 
-int	ft_isdigit(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
+	size_t	i;
+	char	*new_dest;
+	char	*new_src;
+
+	i = 0;
+	new_dest = ((char *)dest);
+	new_src = ((char *)src);
+	while (i < n)
 	{
-		return (1);
+		new_dest[i] = new_src[i];
+		i++;
 	}
-	return (0);
+	return (dest);
 }

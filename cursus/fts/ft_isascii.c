@@ -6,9 +6,11 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:24:23 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/09 14:46:15 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:17:05 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Check if c fits into ASCII char set;

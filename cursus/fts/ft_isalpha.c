@@ -6,9 +6,11 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 09:45:42 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/09 14:13:54 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:16:33 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Check if c is an alphabetical char;

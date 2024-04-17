@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 10:32:47 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:30 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/17 14:55:03 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/17 15:21:48 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Check if c is a digit (0 through 9)
+Replace the first n bytes of memory pointed by s with 0 ('\0');
+None;
 */
 
-int	ft_isdigit(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= '0' && c <= '9')
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = ((char *)s);
+	while (i < n)
 	{
-		return (1);
+		str[i] = '\0';
+		i++;
 	}
-	return (0);
 }

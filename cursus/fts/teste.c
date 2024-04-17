@@ -6,23 +6,23 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:46:32 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 14:55:01 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:11:32 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int main() {
-    char dst[20] = "Hello, ";
-    const char *src = "world!";
-    
-    printf("Original destination string: \"%s\"\n", dst);
-    printf("Source string: \"%s\"\n", src);
+    // Test data
+    char str2[] = "foo-bar-men";
+	char str[] = "pal-god";
 
-    size_t result = ft_strlcat(dst, src, sizeof(dst));
+    // Print original string
+    printf("Original string: %s\n", str);
 
-    printf("Concatenated string: \"%s\"\n", dst);
-    printf("Result of ft_strlcat: %zu\n", result);
+    // Test ft_memmove with overlapping regions
+    ft_memmove(str , str2, 7);
+    printf("After ft_memmove (with overlap): %s\n", str);
 
     return 0;
 }

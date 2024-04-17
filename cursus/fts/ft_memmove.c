@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 10:32:47 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:30 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/17 15:55:36 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/17 16:43:04 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Check if c is a digit (0 through 9)
+
 */
 
-int	ft_isdigit(int c)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	return (0);
+	char	*new_dest;
+	char	*new_src;
+
+    new_dest = ((char *)dest);
+    new_src = ((char *)src);
+    if (new_dest > new_src)
+    {
+        while (n > 0)
+        {
+            n--;
+            new_dest[n] = new_src[n];
+        }
+    }
+    else
+    {
+        ft_memcpy(new_dest, new_src, n);
+    }
+    return (dest);
 }
