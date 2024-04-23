@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 11:20:15 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 12:12:35 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/23 09:41:36 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/23 10:44:21 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Copy string from src to dst;
-Copy up to size - 1 chars, and NULL terminate the result;
-Return = src length;
+Allocate mem for an array of nmemb elements of size bytes (using malloc);
+Mem is set to zero (ft_bzero);
+Return pointer to allocated mem or NULL if nmemb or size equal to 0;
 */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	size_t	src_len;
+	void	*point;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	if (size == 0)
+	point = (void *)malloc(nmemb * size);
+	if (point == 0)
 	{
-		return (src_len);
+		return (NULL);
 	}
-	while (src[i] != '\0' && i < (size - 1))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+	ft_bzero(point, nmemb);
+	return (point);
 }

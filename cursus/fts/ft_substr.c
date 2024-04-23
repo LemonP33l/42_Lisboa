@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 11:20:15 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 12:12:35 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/23 11:00:55 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/23 12:02:38 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Copy string from src to dst;
-Copy up to size - 1 chars, and NULL terminate the result;
-Return = src length;
+Create substring from string s (using malloc for substring mem allocation);
+Substring begins at index start, with a max size of len;
 */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	src_len;
+	size_t	j;
+	char	*str_sub;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	if (size == 0)
+	i = start;
+	j = 0;
+	str_sub = (char *)malloc(sizeof(*s) * (len + 1));
+	if (str_sub == 0)
 	{
-		return (src_len);
+		return (NULL);
 	}
-	while (src[i] != '\0' && i < (size - 1))
+	while (s[i] != '\0' && j < len)
 	{
-		dst[i] = src[i];
+		str_sub[j] = s[i];
 		i++;
+		j++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	str_sub[j] = '\0';
+	return (str_sub);
 }

@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 11:20:15 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 12:12:35 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/23 10:09:45 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/23 10:43:55 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Copy string from src to dst;
-Copy up to size - 1 chars, and NULL terminate the result;
-Return = src length;
+Create string which is a duplicate of s;
+Mem for the duplicate is obtained with malloc;
+Return a pointer to the duplicate or NULL if insufficient mem was available;
 */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
 	size_t	i;
-	size_t	src_len;
+	size_t	len_s;
+	char	*str_dup;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	if (size == 0)
+	len_s = ft_strlen(s);
+	str_dup = (char *)malloc(sizeof(*s) * (len_s + 1));
+	if (str_dup == 0)
 	{
-		return (src_len);
+		return (NULL);
 	}
-	while (src[i] != '\0' && i < (size - 1))
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
+		str_dup[i] = s[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	str_dup[i] = '\0';
+	return (str_dup);
 }

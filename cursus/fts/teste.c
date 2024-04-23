@@ -6,30 +6,30 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:46:32 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 18:46:14 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:05:59 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main() {
-    // Test data
-    char str[] = "Hello, world!";
-    char search_char = 'o';
-    size_t n = strlen(str);
+/*int main() {
+    const char *s1 = "  \tHello, world!  \t ";
+    const char *set = "H \t";
 
-    // Print original string
-    printf("Original string: %s\n", str);
-
-    // Search for the character 'o' in the string using ft_memchr
-    void *result = ft_memchr(str, search_char, n);
-
-    // Check if the character was found
-    if (result != NULL) {
-        printf("Character '%c' found at position: %ld\n", search_char, (char *)result - str);
-    } else {
-        printf("Character '%c' not found in the string.\n", search_char);
+    // Test ft_strtrim
+    char *result = ft_strtrim(s1, set);
+    if (result == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
     }
 
+    // Print the result
+    printf("Original string: \"%s\"\n", s1);
+    printf("Set characters: \"%s\"\n", set);
+    printf("Trimmed string: \"%s\"\n", result);
+
+    // Free the memory allocated for the result
+    free(result);
+
     return 0;
-}
+}*/

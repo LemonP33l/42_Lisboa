@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:55:03 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 15:21:48 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/04/23 09:57:08 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 /*
 Replace the first n bytes of memory pointed by s with 0 ('\0');
-None;
 */
 
 void	ft_bzero(void *s, size_t n)

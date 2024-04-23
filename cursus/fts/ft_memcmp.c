@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 11:20:15 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 12:12:35 by eduferna         ###   ########.fr       */
+/*   Created: 2024/04/20 14:13:57 by eduferna          #+#    #+#             */
+/*   Updated: 2024/04/23 09:40:08 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Copy string from src to dst;
-Copy up to size - 1 chars, and NULL terminate the result;
-Return = src length;
+Compare the first n bytes of the memory areas s1 and s2 (as unsigned chars);
+Returns an int less than, equal to, or greater than 0
+(respectively: s1 <, >, = s2);
 */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	size_t	src_len;
+	size_t			i;
+	unsigned char	*new_s1;
+	unsigned char	*new_s2;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	if (size == 0)
+	new_s1 = ((unsigned char *)s1);
+	new_s2 = ((unsigned char *)s2);
+	while (i < n && (new_s1[i] == new_s2[i]))
 	{
-		return (src_len);
-	}
-	while (src[i] != '\0' && i < (size - 1))
-	{
-		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	if (i == n)
+		return (0);
+	else
+		return (new_s1[i] - new_s2[i]);
 }
