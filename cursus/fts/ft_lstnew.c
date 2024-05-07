@@ -1,16 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   teste.c                                            :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 13:46:32 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/07 19:27:44 by eduferna         ###   ########.fr       */
+/*   Created: 2024/05/07 18:17:42 by eduferna          #+#    #+#             */
+/*   Updated: 2024/05/07 19:27:53 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Allocate and return a nw node;
+The variable content for new node is initialized by value of param content;
+The variable next for new node is initialized by NULL;
+*/
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new_node;
+
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	(*new_node).content = content;
+	(*new_node).next = NULL;
+	return (new_node);
+}
 
 /*int main() {
     int data = 42;
