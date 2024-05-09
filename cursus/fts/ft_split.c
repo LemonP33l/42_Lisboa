@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:33:57 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/07 11:39:38 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/09 11:56:49 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,21 @@ char	**ft_split(char const *s, char c)
 	new[i] = NULL;
 	return (new);
 }
+
+/*int main()
+{
+    char str[] = "Hello,world,this,is,a,test";
+    char **result = ft_split(str, ',');
+    if (result == NULL)
+    {
+        printf("Split failed\n");
+        return 1;
+    }
+    for (int i = 0; result[i] != NULL; i++)
+    {
+        printf("%s\n", result[i]);
+        free(result[i]);
+    }
+    free(result);
+    return 0;
+}*/

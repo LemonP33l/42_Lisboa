@@ -6,14 +6,14 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 18:17:42 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/07 19:27:53 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/09 10:01:17 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Allocate and return a nw node;
+Allocate and return a new node;
 The variable content for new node is initialized by value of param content;
 The variable next for new node is initialized by NULL;
 */
