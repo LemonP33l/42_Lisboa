@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:55:03 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 09:57:08 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:54:14 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,15 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*
+int main() {
+    char arr[20] = "Hello World!"; 
+    printf("Original array: %s\n", arr); 
+   
+    ft_bzero(arr, 5 * sizeof(char)); 
+  
+    printf("New array: %s", arr); 
+    return 0; 
+}
+*/

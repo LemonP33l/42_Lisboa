@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:24:23 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:17:05 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:53:18 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,18 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
+
+/*
+int	main() {
+	
+	printf("Testing ft_isascii:\n");
+    printf("ft_isascii('A'): %d\n", ft_isascii('A'));
+    printf("ft_isascii('a'): %d\n", ft_isascii('a'));
+    printf("ft_isascii('Z'): %d\n", ft_isascii('Z'));
+    printf("ft_isascii('z'): %d\n", ft_isascii('z'));
+    printf("ft_isascii('0'): %d\n", ft_isascii('0'));
+    printf("ft_isascii('9'): %d\n", ft_isascii('9'));
+    printf("ft_isascii('#'): %d\n", ft_isascii('#'));
+    return 0;
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 18:17:42 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/09 10:01:17 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:30:50 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,21 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
-/*int main() {
-    int data = 42;
+/*
+int main() {
+	int data = 42;
 
-    t_list *node = ft_lstnew(&data);
+	t_list *node = ft_lstnew(&data);
 
-    if (node != NULL) {
-        printf("Node created successfully.\n");
+	if (node != NULL) {
+		printf("Node created successfully.\n");
 
-        printf("Content: %d\n", *(int *)((*node).content));
-
-        if ((*node).next == NULL) {
-            printf("Next pointer is NULL.\n");
-        } else {
-            printf("Next pointer is not NULL.\n");
-        }
-
-        free(node);
-    } else {
-        printf("Failed to create node.\n");
-    }
-
-    return 0;
+		printf("Content: %d\n", *(int *)((*node).content));
+		
+		free(node);
+	} else {
+		printf("Failed to create node.\n");
+	}
+	return 0;
 }
 */

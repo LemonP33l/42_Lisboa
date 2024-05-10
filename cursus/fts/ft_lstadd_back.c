@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:12:02 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/09 14:54:47 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:12:43 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 }
 
 /*
-int main()
-{
+int del_flag = 0;
+
+void del(void *content) {
+	free(content);
+	del_flag = 1;
+}
+
+void print_content(void *content) {
+	printf("%zu ", *(size_t *)content);
+}
+
+int main() {
 	t_list *lst = NULL;
 	size_t *content1 = (size_t *)malloc(sizeof(size_t));
 	size_t *content2 = (size_t *)malloc(sizeof(size_t));
@@ -59,13 +69,8 @@ int main()
 	}
 	printf("\n");
 
-	free(content1);
-	free(content2);
-	free(content3);
-	free(node1);
-	free(node2);
-	free(node3);
+	ft_lstclear(&lst, &del);
 
-	return (0);
+	return 0;
 }
 */

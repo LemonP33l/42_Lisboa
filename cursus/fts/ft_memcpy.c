@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:22:13 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 17:57:01 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:59:05 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int main() {
+    char src[] = "Hello, world!";
+    char dest[20];
+
+    ft_memcpy(dest, src, 5 * sizeof(char));
+
+    printf("Copied string: %s\n", dest);
+
+    return 0;
+}
+*/

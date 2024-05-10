@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/09 12:22:49 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/10 13:23:06 by eduferna         ###   ########.fr       */
+/*   Created: 2024/05/09 18:58:25 by eduferna          #+#    #+#             */
+/*   Updated: 2024/05/10 13:09:22 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Return the last node of the list;
+Iterates lst and apply function f to the content of the respective node;
 */
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		return (NULL);
+	if (!lst || !f)
+		return ;
 	while (lst)
 	{
-		if ((*lst).next == NULL)
-			return (lst);
-		else
-			lst = (*lst).next;
+		(*f)((*lst).content);
+		lst = (*lst).next;
 	}
-	return (lst);
 }
 
 /*
@@ -36,6 +33,10 @@ int del_flag = 0;
 void del(void *content) {
 	free(content);
 	del_flag = 1;
+}
+
+void print_content(void *content) {
+	printf("%zu ", *(size_t *)content);
 }
 
 int main() {
@@ -52,17 +53,20 @@ int main() {
 	t_list *node2 = ft_lstnew(content2);
 	t_list *node3 = ft_lstnew(content3);
 
-	ft_lstadd_front(&lst, node1);
-	ft_lstadd_front(&lst, node2);
-	ft_lstadd_front(&lst, node3);
+	printf("Before iterating list:\n");
+	t_list *curr = lst;
+	while (curr) {
+		printf("%zu ", *(size_t *)((*curr).content));
+		curr = (*curr).next;
+	}
+	printf("\n");
 
-	t_list *last_node = ft_lstlast(lst);
+	ft_lstadd_back(&lst, node1);
+	ft_lstadd_back(&lst, node2);
+	ft_lstadd_back(&lst, node3);
 
-	size_t last_content = *((size_t *)((*last_node).content));
-
-	printf("Last node: ");
-
-	printf("%zu", last_content);
+	printf("After iterating list:\n");
+	ft_lstiter(node1, &print_content);
 	printf("\n");
 
 	ft_lstclear(&lst, &del);

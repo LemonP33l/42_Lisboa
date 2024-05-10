@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:25:28 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 15:17:43 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:52:21 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,15 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*
+int main() {
+    char arr[20] = "Hello World!"; 
+    printf("Original array: %s\n", arr); 
+   
+    ft_memset(arr, 'O', 5 * sizeof(char)); 
+  
+    printf("New array: %s", arr); 
+    return 0; 
+}
+*/

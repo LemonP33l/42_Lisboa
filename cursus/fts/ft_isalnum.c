@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:13:54 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/09 14:26:55 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:50:50 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,18 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
+
+/*
+int	main() {
+	
+	printf("Testing ft_isalnum:\n");
+    printf("ft_isalnum('A'): %d\n", ft_isalnum('A'));
+    printf("ft_isalnum('a'): %d\n", ft_isalnum('a'));
+    printf("ft_isalnum('Z'): %d\n", ft_isalnum('Z'));
+    printf("ft_isalnum('z'): %d\n", ft_isalnum('z'));
+    printf("ft_isalnum('0'): %d\n", ft_isalnum('0'));
+    printf("ft_isalnum('9'): %d\n", ft_isalnum('9'));
+    printf("ft_isalnum('#'): %d\n", ft_isalnum('#'));
+    return 0;
+}
+*/

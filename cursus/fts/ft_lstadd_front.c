@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 10:01:55 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/09 11:30:53 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:14:30 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,39 +24,46 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-/*int main()
-  {
-  t_list *lst = NULL;
-  size_t *content1 = (size_t *)malloc(sizeof(size_t));
-  size_t *content2 = (size_t *)malloc(sizeof(size_t));
-  size_t *content3 = (size_t *)malloc(sizeof(size_t));
+/*
+int del_flag = 0;
 
- *content1 = 1;
- *content2 = 2;
- *content3 = 3;
+void del(void *content) {
+	free(content);
+	del_flag = 1;
+}
 
- t_list *node1 = ft_lstnew(content1);
- t_list *node2 = ft_lstnew(content2);
- t_list *node3 = ft_lstnew(content3);
+void print_content(void *content) {
+	printf("%zu ", *(size_t *)content);
+}
 
- ft_lstadd_front(&lst, node1);
- ft_lstadd_front(&lst, node2);
- ft_lstadd_front(&lst, node3);
+int main() {
+	t_list *lst = NULL;
+	size_t *content1 = (size_t *)malloc(sizeof(size_t));
+	size_t *content2 = (size_t *)malloc(sizeof(size_t));
+	size_t *content3 = (size_t *)malloc(sizeof(size_t));
 
- printf("List elements: ");
- t_list *curr = lst;
- while (curr != NULL) {
- printf("%zu ", *((size_t *)(*curr).content));
- curr = (*curr).next;
- }
- printf("\n");
+	*content1 = 1;
+	*content2 = 2;
+	*content3 = 3;
 
- free(content1);
- free(content2);
- free(content3);
- free(node1);
- free(node2);
- free(node3);
+	t_list *node1 = ft_lstnew(content1);
+	t_list *node2 = ft_lstnew(content2);
+	t_list *node3 = ft_lstnew(content3);
 
- return (0);
- }*/
+	ft_lstadd_front(&lst, node1);
+	ft_lstadd_front(&lst, node2);
+	ft_lstadd_front(&lst, node3);
+
+	printf("List elements: ");
+	t_list *curr = lst;
+	while (curr != NULL) {
+		printf("%zu ", *((size_t *)(*curr).content));
+		curr = (*curr).next;
+	}
+	printf("\n");
+
+	ft_lstclear(&lst, &del);
+
+	return 0;
+}
+*/

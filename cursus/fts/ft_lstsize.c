@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 11:57:58 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/09 12:21:54 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:39:46 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,15 @@ int	ft_lstsize(t_list *lst)
 	return (i);
 }
 
-/*int main()
-{
+/*
+int del_flag = 0;
+
+void del(void *content) {
+	free(content);
+	del_flag = 1;
+}
+
+int main() {
 	t_list *lst = NULL;
 	size_t *content1 = (size_t *)malloc(sizeof(size_t));
 	size_t *content2 = (size_t *)malloc(sizeof(size_t));
@@ -55,12 +62,8 @@ int	ft_lstsize(t_list *lst)
 	printf("%d", ft_lstsize(lst));
 	printf("\n");
 
-	free(content1);
-	free(content2);
-	free(content3);
-	free(node1);
-	free(node2);
-	free(node3);
+	ft_lstclear(&lst, &del);
 
-	return (0);
-}*/
+	return 0;
+}
+*/

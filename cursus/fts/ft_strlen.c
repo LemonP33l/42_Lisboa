@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 09:36:01 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 10:21:41 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/10 14:01:05 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,14 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+
+/*
+int	main() {
+	
+	char arr[] = "Hello World!";
+
+	printf("The string is: %s\n", arr);
+	printf("The size is: %zu\n", ft_strlen(arr));
+	return (0);
+}
+*/
