@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 10:01:55 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/10 13:14:30 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:06:51 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

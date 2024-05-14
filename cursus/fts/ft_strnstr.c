@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:21:41 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/17 14:03:47 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:09:13 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,23 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+int main() {
+    const char *big_str = "Hello, world!";
+    const char *little_str = "world";
+    size_t len = sizeof(big_str);
+    
+    char *result = ft_strnstr(big_str, little_str, len);
+
+    if (result != NULL) {
+        printf("'%s' found starting at position: %ld\n", little_str,
+         result - big_str);
+    } else {
+        printf("'%s' not found in the first %zu characters of the big_str.\n",
+         little_str, len);
+    }
+
+    return 0;
+}
+*/

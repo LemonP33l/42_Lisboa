@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:33:09 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 15:45:07 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:08:47 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (final);
 }
+
+/*
+int main() {
+    char dst[20] = "Hello, ";
+    char src[] = "world!";
+    size_t cat;
+
+    cat = ft_strlcat(dst, src, sizeof(dst));
+
+    printf("Concatenated string: %s\n", dst);
+    printf("Length of concatenated string: %zu\n", cat);
+
+    return 0;
+}
+*/

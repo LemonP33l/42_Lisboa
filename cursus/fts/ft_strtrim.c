@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:02:48 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 14:36:46 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:09:23 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Mem allocation for copy done using malloc;
 Return NULL if allocation fails;
 */
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	start;
 	size_t	end;
@@ -42,3 +42,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str_new, &s1[start], (end - start + 1));
 	return (str_new);
 }
+
+/*
+int main() {
+    const char *str = "  Hello, world!  ";
+    const char *set = " ";
+    char *trimmed_str;
+
+    trimmed_str = ft_strtrim(str, set);
+
+    if (trimmed_str != NULL) {
+        printf("Original string: '%s'\n", str);
+        printf("Set to trim: '%s'\n", set);
+        printf("Trimmed string: '%s'\n", trimmed_str);
+
+        free(trimmed_str);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:00:42 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/20 15:01:00 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:07:28 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,22 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*
+int main() {
+    const char str[] = "Hello, world!";
+    char search_char = 'w';
+    size_t n = sizeof(str);
+    
+    void *result = ft_memchr(str, search_char, n);
+
+    if (result != NULL) {
+        printf("Character '%c' found at position: %ld\n", search_char, 
+        (char *)result - str);
+    } else {
+        printf("Character '%c' not found in the memory block.\n", search_char);
+    }
+
+    return 0;
+}
+*/

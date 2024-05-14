@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 10:09:45 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 10:43:55 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:08:29 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,23 @@ char	*ft_strdup(const char *s)
 	str_dup[i] = '\0';
 	return (str_dup);
 }
+
+/*
+int main() {
+    const char *original_str = "Hello, world!";
+    char *duplicate_str;
+    
+    duplicate_str = ft_strdup(original_str);
+
+    if (duplicate_str != NULL) {
+        printf("Original string: %s\n", original_str);
+        printf("Duplicate string: %s\n", duplicate_str);
+
+        free(duplicate_str);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+*/

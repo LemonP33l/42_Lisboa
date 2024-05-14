@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 11:46:08 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/07 16:02:24 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:06:45 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 /*
 Allocates memory returning a string that represents th int received as input;
 Negative numbers are handled;
+Static functions: Limited scope to the file where it is declared;
+(Make sure it's an helper function to this file);
 */
 
 static	size_t	ft_nbr_count(int n)
@@ -59,3 +61,23 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
+/*
+int main() {
+    int num = -12345;
+    char *str;
+
+    str = ft_itoa(num);
+
+    if (str != NULL) {
+        printf("Original number: %d\n", num);
+        printf("Converted string: %s\n", str);
+
+        free(str);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+*/

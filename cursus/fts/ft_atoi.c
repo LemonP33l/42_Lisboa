@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:15:38 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 11:37:31 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:06:12 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@ Converts initial part of a string to int;
 ATOI DOES NOT DETECT ERRORS;
 */
 
+static	int	ft_isspace(char c)
+{
+	if ((c >= 9 && c <= 13) || (c == 32))
+	{
+		return (1);
+	}
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -26,6 +35,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	final = 0;
+	if (!str)
+		return (0);
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
@@ -33,7 +44,7 @@ int	ft_atoi(const char *str)
 		sign = sign * -1;
 		i++;
 	}
-	if (str[i] == '+')
+	else if (str[i] == '+')
 		i++;
 	while (ft_isdigit(str[i]) && str[i] != '\0')
 	{
@@ -43,3 +54,15 @@ int	ft_atoi(const char *str)
 	final = final * sign;
 	return (final);
 }
+
+/*
+int main() {
+    const char *str = "   -12345abc";
+
+    int result = ft_atoi(str);
+
+    printf("Result of ft_atoi: %d\n", result);
+
+    return 0;
+}
+*/

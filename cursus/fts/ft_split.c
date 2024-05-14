@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:33:57 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/09 11:56:49 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:03:40 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 /*
 Split the input string s into substrings based on the delimiter c;
 Return an array of pointers to those substrings;
+Static functions: Limited scope to the file where it is declared;
+(Make sure it's an helper function to this file);
 */
 
 static	size_t	ft_substr_count(const char *s, char c)
@@ -22,6 +24,8 @@ static	size_t	ft_substr_count(const char *s, char c)
 	size_t	substr_count;
 
 	substr_count = 0;
+	if (!s)
+		return (NULL);
 	while (*s != '\0')
 	{
 		while (*s == c)
@@ -73,11 +77,6 @@ char	**ft_split(char const *s, char c)
 {
     char str[] = "Hello,world,this,is,a,test";
     char **result = ft_split(str, ',');
-    if (result == NULL)
-    {
-        printf("Split failed\n");
-        return 1;
-    }
     for (int i = 0; result[i] != NULL; i++)
     {
         printf("%s\n", result[i]);

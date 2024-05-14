@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:42:51 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 16:06:20 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:09:35 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,17 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
+
+/*
+int main() {
+    char uppercase = 'A';
+    char lowercase;
+
+    lowercase = ft_tolower(uppercase);
+
+    printf("Original character: %c\n", uppercase);
+    printf("Lowercase character: %c\n", lowercase);
+
+    return 0;
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:02:16 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/10 16:09:33 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:09:39 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,17 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+
+/*
+int main() {
+    char lowercase = 'a';
+    char uppercase;
+
+    uppercase = ft_toupper(lowercase);
+
+    printf("Original character: %c\n", lowercase);
+    printf("Uppercase character: %c\n", uppercase);
+
+    return 0;
+}
+*/

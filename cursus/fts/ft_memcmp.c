@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 14:13:57 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 09:40:08 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:07:31 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,25 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	else
 		return (new_s1[i] - new_s2[i]);
 }
+
+/*
+int main() {
+    const char str1[] = "Hello, world!";
+    const char str2[] = "Hello, world!";
+    size_t n = sizeof(str1);
+    
+    int result = ft_memcmp(str1, str2, n);
+
+    if (result == 0) {
+        printf("The first %zu characters of the strings are equal.\n", n);
+    } else if (result < 0) {
+        printf("The first %zu characters of the first string are less than 
+		the corresponding characters of the second string.\n", n);
+    } else {
+        printf("The first %zu characters of the first string are greater than 
+		the corresponding characters of the second string.\n", n);
+    }
+
+    return 0;
+}
+*/

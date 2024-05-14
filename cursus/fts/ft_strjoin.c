@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduferna <eduferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:03:09 by eduferna          #+#    #+#             */
-/*   Updated: 2024/04/23 13:02:07 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:08:39 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str_new, s2, (len_new + len_s2 + 1));
 	return (str_new);
 }
+
+/*
+int main() {
+    const char *str1 = "Hello, ";
+    const char *str2 = "world!";
+    char *joined_str;
+
+    joined_str = ft_strjoin(str1, str2);
+
+    if (joined_str != NULL) {
+        printf("Joined string: %s\n", joined_str);
+
+        free(joined_str);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+*/
