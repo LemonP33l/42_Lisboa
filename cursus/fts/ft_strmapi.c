@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:00:21 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/14 12:09:03 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/15 12:40:56 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
 	while (str[i])
 	{
 		str[i] = f(i, str[i]);

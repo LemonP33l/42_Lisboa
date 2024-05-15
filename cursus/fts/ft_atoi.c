@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:15:38 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/14 12:06:12 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/15 12:26:25 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	final = 0;
-	if (!str)
-		return (0);
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')

@@ -6,14 +6,14 @@
 /*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 11:46:08 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/14 12:06:45 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/15 14:17:22 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Allocates memory returning a string that represents th int received as input;
+Allocates memory returning a string that represents the int received as input;
 Negative numbers are handled;
 Static functions: Limited scope to the file where it is declared;
 (Make sure it's an helper function to this file);

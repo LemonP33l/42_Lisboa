@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:28:41 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/14 12:08:22 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/15 14:50:40 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (char)c)

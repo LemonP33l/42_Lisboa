@@ -6,7 +6,7 @@
 /*   By: eduferna <eduferna@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:22:13 by eduferna          #+#    #+#             */
-/*   Updated: 2024/05/14 12:07:37 by eduferna         ###   ########.fr       */
+/*   Updated: 2024/05/15 13:31:59 by eduferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*new_dest;
 	char	*new_src;
 
+	if (!dest && !src)
+	{
+		if (n == 0)
+			return (dest);
+		return (NULL);
+	}
 	i = 0;
 	new_dest = ((char *)dest);
 	new_src = ((char *)src);
